@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import withMDX from '@next/mdx';
+
+const mdx = withMDX({ extension: /\.mdx?$/ });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Keep routing to standard JS/TS extensions. We import MDX manually
+  // from `src/content` to avoid duplicate automatic page registration
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
 };
 
-export default nextConfig;
+// Wrap the Next config with the MDX plugin so .mdx files are compiled to modules
+export default mdx(nextConfig) as NextConfig;

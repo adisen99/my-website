@@ -1,0 +1,11 @@
+
+> my-website@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: loader /Users/adisen99/github/personal_site/my-website/node_modules/@next/mdx/mdx-js-loader.js for match "{*,next-mdx-rule}" does not have serializable options. Ensure that options passed are plain JavaScript objects and values.
+    at ignore-listed frames
