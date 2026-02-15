@@ -24,9 +24,9 @@ const Navbar = () => {
           <Image
             src={logoSrc}
             alt="Aditya Sengupta"
-            width={260}
-            height={96}
-            className="h-10 w-auto"
+            width={140}
+            height={40}
+            className="h-6 w-auto"
             priority
           />
         </Link>

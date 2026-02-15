@@ -1,44 +1,110 @@
 "use client";
 import { motion } from "framer-motion";
-import { MapPin, Presentation, Video, ChevronRight, Download } from "lucide-react";
+import { MapPin } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const TalkMap = dynamic(() => import("@/components/TalkMap"), { ssr: false });
 
 // Updated data to match the content in the image
 const allTalks = [
   {
-    title: "The Future of Inclusive AI",
-    date: "March 15, 2024",
-    venue: "Tech Innovators Conference",
-    location: "San Francisco, CA",
+    title: "What have we learned from CMIP 2026? Insights from ECR Interactive workshop",
+    date: "March 2026",
+    venue: "CMIP 2026 workshop",
+    location: "Kyoto, Japan",
     tag: "Keynote",
-    link: "https://example.com/future-of-inclusive-ai",
-    linkText: "Video",
+    // link: "#",
+    // linkText: "poster",
   },
   {
-    title: "Advancements in Machine Learning", 
-    date: "April 10, 2024",
-    venue: "AI Summit 2024",
-    location: "New York, NY",
-    tag: "Panel",
-    link: "https://example.com/advancements-in-machine-learning",
-    linkText: "Slides",
+    title: "Are ENSO teleconnection changes robust to internal variability? Insights from single model large ensembles",
+    date: "March 2026",
+    venue: "CMIP 2026 workshop",
+    location: "Kyoto, Japan",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "poster",
   },
   {
-    title: "Ethics in Artificial Intelligence",
-    date: "May 22, 2023",
-    venue: "Global Tech Forum",
-    location: "London, UK",
-    tag: "Invited",
-    link: "https://example.com/ethics-in-ai",
-    linkText: "Video",
+    title: "Exploring AI Reconstructions, Insights into warming trends",
+    date: "February 2026",
+    venue: "AMOS Conference 2026",
+    location: "Hobart, Tasmania, Australia",
+    tag: "Poster",
+    // link: "#",
+    // linkText: "poster",
   },
   {
-    title: "AI for Social Good",
-    date: "November 5, 2023",
-    venue: "Social Impact Conference",
-    location: "Toronto, Canada",
-    tag: "Seminar",
-    link: "https://example.com/ai-for-social-good",
-    linkText: "Slides",
+    title: "Should we be distinguishing between different 'flavours' of La Niñas?",
+    date: "June 2025",
+    venue: "AMOS Conference 2025",
+    location: "Cairns, Queensland, Australia",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
+  },
+  {
+    title: "Long term changes in tropical Pacific mean state driven by inter-hemispheric differences due to delayed Southern Ocean warming",
+    date: "March 10, 2025",
+    venue: "ENSO Wyrtki Symposium",
+    location: "Manoa, Hawaii, USA",
+    tag: "Poster",
+    // link: "#",
+    // linkText: "poster",
+  },
+  {
+    title: "Changes in ENSO post net zero: insights from the ACCESS-ESM1.5",
+    date: "March 10, 2025",
+    venue: "ENSO Wyrtki Symposium",
+    location: "Manoa, Hawaii, USA",
+    tag: "Poster",
+    // link: "#",
+    // linkText: "poster",
+  },
+  {
+    title: "Changes in ENSO variability and teleconnections beyond net zero in ACCESS-ESM1.5",
+    date: "August 1, 2024",
+    venue: "Australian Academy of Science Elizabeth and Frederick White Research Conference on Atmospheric Dynamics",
+    location: "Melbourne, Australia",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
+  },
+  {
+    title: "Changes in ENSO variability and teleconnections beyond net zero in ACCESS-ESM1.5",
+    date: "August 1, 2024",
+    venue: "Australian Academy of Science Elizabeth and Frederick White Research Conference on Atmospheric Dynamics",
+    location: "Melbourne, Australia",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
+  },
+  {
+    title: "Acceleration of local warming damped in urban regions of the Global South", 
+    date: "June 28, 2024",
+    venue: "International Meeting on Statistical Climatology, Meteo-France",
+    location: "Toulouse, France",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
+  },
+  {
+    title: "Regional and seasonal diversity of ENSO-precipitation teleconections and their asymmetry in CMIP6 models",
+    date: "June 28, 2024",
+    venue: "International Meeting on Statistical Climatology, Meteo-France",
+    location: "Toulouse, France",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
+  },
+  {
+    title: "Assessment of CMIP6 model capabilities in simulating the asymmetric response of precipitation to ENSO",
+    date: "February 3, 2024",
+    venue: "AMOS Conference 2024",
+    location: "Canberra, Australia",
+    tag: "Talk",
+    // link: "#",
+    // linkText: "Slides",
   },
 ]
 
@@ -49,10 +115,61 @@ const talksByYear = allTalks.reduce((acc, talk) => {
   return acc;
 }, {} as Record<string, typeof allTalks>);
 
+const talkLocations = [
+  {
+    city: "Kyoto, Japan",
+    label: "CMIP 2026 workshop",
+    lat: 35.0116,
+    lng: 135.7681,
+  },
+  {
+    city: "Hobart, Australia",
+    label: "AMoS Conference 2026",
+    lat: -42.8821,
+    lng: 147.3272,
+  },
+  {
+    city: "Cairns, Australia",
+    label: "AMOS Conference 2025",
+    lat: -16.9203,
+    lng: 145.771,
+  },
+  {
+    city: "Manoa, Hawaii, USA",
+    label: "ENSO Wyrtki Symposium",
+    lat: 21.3008,
+    lng: -157.817,
+  },
+  {
+    city: "Melbourne, Australia",
+    label: "AAS Atmospheric Dynamics Conference",
+    lat: -37.8136,
+    lng: 144.9631,
+  },
+  {
+    city: "Toulouse, France",
+    label: "International Meeting on Statistical Climatology",
+    lat: 43.6047,
+    lng: 1.4442,
+  },
+  {
+    city: "Canberra, Australia",
+    label: "AMOS Conference 2024",
+    lat: -35.2809,
+    lng: 149.13,
+  },
+];
+
 export default function TalksPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-12">Talks & Presentations</h1>
+      <h1 className="text-4xl font-bold mb-12">Talks & Posters</h1>
+
+      <section className="mb-16">
+        <h2 className="text-xl font-bold mb-4">Talk Map</h2>
+        <p className="text-sm mb-4">Locations where I have presented so far.</p>
+        <TalkMap locations={talkLocations} />
+      </section>
       
       {/* Loop through the years in reverse order (newest first) */}
       {Object.keys(talksByYear).sort((a, b) => parseInt(b) - parseInt(a)).map(year => (
@@ -92,16 +209,16 @@ export default function TalksPage() {
                     )}
 
                     {/* Slides/Video Link */}
-                    {talk.linkText && (
+                    {/* {talk.linkText && (
                         <a href={talk.link} className="mt-3 flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
                             {talk.linkText === "Video" ? <Video size={14}/> : <Presentation size={14}/>}
                             {talk.linkText}
                         </a>
-                    )}
+                    )} */}
                   </div>
 
                   {/* Tag (Keynote, Seminar, Invited) on the right */}
-                  <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 ml-4 rounded-full bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400 whitespace-nowrap">
+                  <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 ml-4 rounded-full bg-zinc-100 text-zinc-200 dark:bg-zinc-600 dark:text-zinc-200 whitespace-nowrap">
                     {talk.tag}
                   </span>
                 </div>

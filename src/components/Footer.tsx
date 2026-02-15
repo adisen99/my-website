@@ -12,8 +12,8 @@ import {
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/adisen99", Icon: SiGithub },
-  { name: "ORCID", href: "https://orcid.org", Icon: SiOrcid },
-  { name: "Google Scholar", href: "https://scholar.google.com", Icon: SiGooglescholar },
+  { name: "ORCID", href: "https://orcid.org/0000-0003-2721-3818", Icon: SiOrcid },
+  { name: "Google Scholar", href: "https://scholar.google.com/citations?user=yHHH8MsAAAAJ&hl=en", Icon: SiGooglescholar },
   { name: "Bluesky", href: "https://bsky.app/profile/adisen99.bsky.social", Icon: SiBluesky },
   { name: "LinkedIn", href: "https://linkedin.com/in/adisen99", Icon: SiLinkedin },
   { name: "ResearchGate", href: "https://www.researchgate.net/profile/Aditya-Sengupta-2", Icon: SiResearchgate },

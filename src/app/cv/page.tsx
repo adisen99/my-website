@@ -6,12 +6,14 @@ export default function CvPage() {
     <main className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-bold mb-10">CV</h1>
 
-      <div className="space-y-4 text-lg text-zinc-700 dark:text-zinc-300">
+      <div className="space-y-4 text-lg">
         <p>
           Here is a link to my latest CV as of November 2025...{" "}
           <Link
-            href="#"
-            className="underline decoration-zinc-400 underline-offset-4 hover:text-blue-600 transition-colors"
+            href="/files/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-zinc-400 underline-offset-4 transition-colors"
           >
             Download file
           </Link>
@@ -21,7 +23,7 @@ export default function CvPage() {
           Please{" "}
           <a
             href="mailto:aditya.sengupta@student.unimelb.edu.au"
-            className="underline decoration-zinc-400 underline-offset-4 hover:text-blue-600 transition-colors"
+            className="underline decoration-zinc-400 underline-offset-4 transition-colors"
           >
             email me
           </a>{" "}
