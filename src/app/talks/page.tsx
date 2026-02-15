@@ -52,7 +52,7 @@ const talksByYear = allTalks.reduce((acc, talk) => {
 export default function TalksPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-12 text-black dark:text-white">Talks & Presentations</h1>
+      <h1 className="text-4xl font-bold mb-12">Talks & Presentations</h1>
       
       {/* Loop through the years in reverse order (newest first) */}
       {Object.keys(talksByYear).sort((a, b) => parseInt(b) - parseInt(a)).map(year => (
@@ -72,7 +72,7 @@ export default function TalksPage() {
                 <div className="flex justify-between items-start">
                   <div>
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
+                    <h3 className="text-xl font-bold mb-2">
                       {talk.title}
                     </h3>
                     

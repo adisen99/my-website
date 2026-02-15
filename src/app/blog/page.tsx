@@ -24,7 +24,7 @@ const blogPosts = [
 export default function BlogListingPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-16 text-black dark:text-white">Blog</h1>
+      <h1 className="text-4xl font-bold mb-16">Blog</h1>
       
       <div className="space-y-0">
         {blogPosts.map((post) => (
@@ -35,7 +35,7 @@ export default function BlogListingPage() {
             className="py-10 border-b border-zinc-200 dark:border-zinc-700 last:border-b-0"
           >
             <p className="text-sm font-mono text-zinc-500 mb-3">{post.date}</p>
-            <h2 className="text-2xl font-bold mb-3 text-black dark:text-white group-hover:text-blue-600 transition-colors">
+            <h2 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
               <Link href={`/blog/${post.slug}`}>{post.title}</Link>
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 mb-6 max-w-2xl">{post.description}</p>

@@ -39,7 +39,7 @@ export default function Home() {
         
         {/* Right: Bio & Quote */}
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="md:col-span-2 space-y-6">
-          <h1 className="text-4xl font-bold dark:text-white">Dr. Your Name</h1>
+            <h1 className="text-4xl font-bold">Aditya Sengupta</h1>
           <p className="text-xl text-zinc-600 dark:text-zinc-300">
             Assistant Professor of Computer Science, University Name
           </p>
@@ -58,14 +58,14 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }}
         // Added mt-16 for space above this section. Removed pt-12.
-        className="border-t border-zinc-100 dark:border-zinc-800 mt-16 pt-12" 
+        className="recent-updates border-t mt-16 pt-12"
       >
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-500 mb-6">Recent Updates</h2>
+        <h2 className="text-sm font-semibold uppercase tracking-widest mb-6">Recent Updates</h2>
         <div className="space-y-4">
           {updates.map((update) => (
             <div key={update.date} className="flex flex-col md:flex-row gap-2">
-              <span className="text-sm font-mono text-zinc-400 w-24 flex-shrink-0">{update.date}</span>
-              <a href={update.link} target="_blank" rel="noopener noreferrer" className="text-zinc-700 dark:text-zinc-300 hover:underline hover:text-blue-600 flex items-center gap-2">
+              <span className="recent-updates-date text-sm font-mono w-24 flex-shrink-0">{update.date}</span>
+                <a href={update.link} target="_blank" rel="noopener noreferrer" className="recent-updates-link hover:underline flex items-center gap-2 transition-colors">
                 {update.text}
                 <ExternalLink size={14} />
               </a>

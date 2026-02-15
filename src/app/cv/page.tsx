@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
 
 export default function CvPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-10 text-black dark:text-white">CV</h1>
+      <h1 className="text-4xl font-bold mb-10">CV</h1>
 
       <div className="space-y-4 text-lg text-zinc-700 dark:text-zinc-300">
         <p>

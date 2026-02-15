@@ -47,7 +47,7 @@ const papersByYear = allPapers.reduce((acc, paper) => {
 export default function Publications() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-12 dark:text-white">Publications</h1>
+      <h1 className="text-4xl font-bold mb-12">Publications</h1>
       
       {/* Loop through the years in reverse order (newest first) */}
       {Object.keys(papersByYear).sort((a, b) => parseInt(b) - parseInt(a)).map(year => (
@@ -63,7 +63,7 @@ export default function Publications() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
               >
-                <h3 className="text-lg font-semibold text-white dark:text-white group-hover:text-blue-400 transition-colors flex items-center gap-2">
+                <h3 className="text-lg font-semibold group-hover:text-blue-400 transition-colors flex items-center gap-2">
                   <a href={paper.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     {paper.title} 
                     <ExternalLink size={14} className="text-zinc-500 opacity-70 group-hover:opacity-100 transition-opacity" />

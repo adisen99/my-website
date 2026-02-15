@@ -14,11 +14,11 @@ const socialLinks = [
   { name: "GitHub", href: "https://github.com/adisen99", Icon: SiGithub },
   { name: "ORCID", href: "https://orcid.org", Icon: SiOrcid },
   { name: "Google Scholar", href: "https://scholar.google.com", Icon: SiGooglescholar },
-  { name: "Bluesky", href: "https://bsky.app", Icon: SiBluesky },
+  { name: "Bluesky", href: "https://bsky.app/profile/adisen99.bsky.social", Icon: SiBluesky },
   { name: "LinkedIn", href: "https://linkedin.com/in/adisen99", Icon: SiLinkedin },
   { name: "ResearchGate", href: "https://www.researchgate.net/profile/Aditya-Sengupta-2", Icon: SiResearchgate },
-  { name: "Instagram", href: "https://instagram.com", Icon: SiInstagram },
-  { name: "Twitter", href: "https://twitter.com", Icon: SiX },
+  { name: "Instagram", href: "https://instagram.com/adisen99", Icon: SiInstagram },
+  { name: "Twitter", href: "https://twitter.com/adi_sen99", Icon: SiX },
   { name: "Email", href: "mailto:aditya.sengupta@student.unimelb.edu.au", Icon: SiGmail },
 ];
 
