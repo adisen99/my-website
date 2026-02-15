@@ -37,7 +37,6 @@ const Navbar = () => {
         <div className="hidden sm:flex space-x-6 text-sm font-medium">
           <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">Home</Link>
           <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">About</Link>
-          <Link href="/blog" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">Blog</Link>
           <Link href="/cv" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">CV</Link>
           <Link href="/publications" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">Publications</Link>
           <Link href="/talks" className="text-gray-600 dark:text-gray-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline underline-offset-4 transition-colors">Talks</Link>
