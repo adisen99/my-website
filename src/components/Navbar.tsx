@@ -4,7 +4,7 @@ import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-800 transition-colors">
+    <nav className="flex justify-between items-center p-6 border-b border-transparent transition-colors">
       <div className="font-bold text-xl tracking-tighter dark:text-white">
         <Link href="/">DR. NAME</Link>
       </div>
@@ -15,6 +15,7 @@ const Navbar = () => {
           <Link href="/" className="hover:text-black dark:hover:text-white transition">Home</Link>
           <Link href="/about" className="hover:text-black dark:hover:text-white transition">About</Link>
           <Link href="/blog" className="hover:text-black dark:hover:text-white transition">Blog</Link>
+          <Link href="/cv" className="hover:text-black dark:hover:text-white transition">CV</Link>
           <Link href="/publications" className="hover:text-black dark:hover:text-white transition">Publications</Link>
           <Link href="/talks" className="hover:text-black dark:hover:text-white transition">Talks</Link>
           <Link href="/photography" className="hover:text-black dark:hover:text-white transition">Photography</Link>

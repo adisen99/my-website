@@ -46,3 +46,24 @@ body {
 
 /* Add this line to force the typography plugin styles */
 @plugin '@tailwindcss/typography'; 
+
+/* Improve light-mode readability for muted text utilities used across pages */
+html:not(.dark) .text-zinc-400 {
+  color: #71717a;
+}
+
+html:not(.dark) .text-zinc-500 {
+  color: #52525b;
+}
+
+html:not(.dark) .text-zinc-600 {
+  color: #3f3f46;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #4b5563;
+}
+
+html:not(.dark) .text-gray-600 {
+  color: #374151;
+}
