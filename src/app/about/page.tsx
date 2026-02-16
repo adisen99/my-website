@@ -25,7 +25,7 @@ export default function AboutPage() {
             {/* add some spacing */}
             <div className="h-2"></div>
             <p>
-              I am a PhD student at <span className="font-bold">University Name</span>, where my research explores changes in the El Niño-Southern Oscillation (ENSO), its impacts and its changes
+              I am a PhD student at <span className="font-bold">University of Melbourne</span>, where my research explores changes in the El Niño-Southern Oscillation (ENSO), its impacts and its changes
               in a warming world under both high and low emissions futures. I am passionate about understanding the complex interactions between the ocean and atmosphere, and how these 
               interactions influence global climate patterns and human systems.
             </p>
